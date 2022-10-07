@@ -9,7 +9,7 @@ const Header = () => {
 
 	const handleInput = () => {
 		if (cityName) {
-			dispatch(setCity(cityName));
+			dispatch(setCity(cityName.trim()));
 		}
 	};
 
