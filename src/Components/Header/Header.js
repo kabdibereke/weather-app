@@ -9,14 +9,14 @@ const Header = () => {
 
 	const handleInput = () => {
 		if (cityName) {
-			dispatch(setCity(cityName.replace(/\.$|[^\w.]|[\d.]/gi, "").trim()));
+			dispatch(setCity(cityName.trim()));
 		}
 	};
 
 	const handleKeyPress = (e) => {
 		if (cityName) {
 			if (e.keyCode == 13) {
-				dispatch(setCity(cityName.replace(/\.$|[^\w.]|[\d.]/gi, "").trim()));
+				dispatch(setCity(cityName.trim()));
 			}
 		}
 	};
