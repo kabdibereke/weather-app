@@ -1,0 +1,117 @@
+.main {
+    margin: 50px 0;
+    
+}
+.main__wrapper {
+
+    max-width: 100%;
+    min-height: 942px;
+
+    border: 6px solid #FFFFFF;
+    border-radius: 18px;
+  
+    &__cityName {
+        max-width: 100%;
+        padding: 8px 18px;
+        .city {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 50px;
+            line-height: 50px;
+            color: #313341;
+        }
+        .date {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 11px;
+            color: #615d5c;
+        }
+    }
+    &__degree {
+        display: flex;
+        align-items: center;
+        padding: 0px 18px;
+        .degree__img {
+            width: 200px;
+            height: 200px;
+        }
+        .degree__wrapper {
+            &__temp {
+                font-style: normal;
+                font-weight: 700;
+                font-size: 60px;
+                line-height: 52px;
+                color: #303345;
+                margin: 0;
+            }
+            &__status {
+                margin: 0;
+                font-weight: 400;
+                font-size: 25px;
+                line-height: 25px;
+                color: #303345;
+                margin-top: 20px;
+                padding-left:10px;
+            }
+        }
+    }
+    &__param {
+        padding: 0px 18px;
+    }
+    &__nav {
+        margin-top: 30px;
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 20px;
+        padding: 0px 18px;
+        .nav__next {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 10px;
+            &:hover {
+                color: #615d5c;
+            }
+
+        }
+    }
+    &__hourForecast {
+        padding: 20px 0;
+        width: 100%;
+        overflow-x: scroll;
+        display: flex;
+        gap: 15px;
+        scrollbar-width: thin; 
+        scrollbar-color: blue orange;
+        transform: rotate(180deg);
+        direction: rtl;
+    }
+}
+
+*::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: orange;
+  }
+
+
+  @media(max-width:350px) {
+    .main__wrapper {
+        &__cityName {
+            .city {
+                font-size: 40px;
+            } 
+        }
+        &__degree {
+            .degree__img {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    }
+  }

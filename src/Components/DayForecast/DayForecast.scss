@@ -1,0 +1,23 @@
+.dayForecast__wrapper {
+    padding: 0 18px;
+    &__header {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-around;
+        .header__arrow {
+            display: flex;
+            align-items:center;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            &__img {
+                width: 20px;
+                height: 20px;
+            }
+        }
+        .header__title {
+            text-align: center;
+        }
+        
+    }
+}
