@@ -11,7 +11,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchWeatherData } from "../../redux/weatherSlice";
 import { fetchWeatherCity } from "../../redux/weatherSlice";
 import { Link } from "react-router-dom";
-import Skeleton from "../../assets/Skeleton";
+import { DotLoader } from "react-spinners";
 
 const Main = () => {
 	const dispatch = useDispatch();
@@ -33,7 +33,16 @@ const Main = () => {
 			<div className='container'>
 				<div className='main__wrapper'>
 					<Header />
-					{status === "loading" && <Skeleton />}
+					{status === "loading" && (
+						<DotLoader
+							color='#ffffff'
+							size={100}
+							cssOverride={{
+								display: "block",
+								margin: "200px auto",
+							}}
+						/>
+					)}
 					{status === "error" && <div>error</div>}
 					{status === "success" && (
 						<>
